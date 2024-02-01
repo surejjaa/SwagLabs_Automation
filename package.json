@@ -1,0 +1,28 @@
+{
+  "name": "swaglabs_automation",
+  "version": "1.0.0",
+  "description": "SwagLabs - Selenium Automation using Typescript",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surejjaa/SwagLabs_Automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/surejjaa/SwagLabs_Automation/issues"
+  },
+  "homepage": "https://github.com/surejjaa/SwagLabs_Automation#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "jest": "^29.7.0",
+    "selenium-webdriver": "^4.17.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  }
+}

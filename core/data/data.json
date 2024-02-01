@@ -1,0 +1,19 @@
+{
+    "credentials": {
+        "username": "standard_user",
+        "password": "secret_sauce",
+        "first_name": "Rajna",
+        "last_name": "Ali",
+        "zip": "72000"
+    },
+    "url": {
+        "login_page": "https://www.saucedemo.com/",
+        "home_page": "https://www.saucedemo.com/inventory.html"
+    },
+    "titles": {
+        "login_page": "Swag Labs"
+    },
+    "headers": {
+        "home_page": "Products"
+    }
+}
