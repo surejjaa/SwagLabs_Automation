@@ -1,7 +1,7 @@
-import { LoginPage } from "../core/page-objects/login-page";
-import { HomePage } from "../core/page-objects/home-page";
-import { CartPage } from "../core/page-objects/cart-page";
 import { createDriver, deleteCookies, quitDriver } from "../core/config/driver-setup";
+import { LoginPageSteps } from "../core/steps/login-page-steps";
+import { HomePageSteps } from "../core/steps/home-page-steps";
+import { CartPageSteps } from "../core/steps/cart-page-steps";
 import { readFileSync } from "fs";
 import * as path from "path";
 const dataFilePath = path.resolve(__dirname, "../core/data/data.json");
@@ -11,20 +11,23 @@ let driver, loginPage, homePage, cartPage;
 
 beforeAll(async () => {
     driver = await createDriver(testData.url.login_page);
-    loginPage = new LoginPage(driver);
-    homePage = new HomePage(driver);
-    cartPage = new CartPage(driver);
-});
+    loginPage = new LoginPageSteps(driver);
+    homePage = new HomePageSteps(driver);
+    cartPage = new CartPageSteps(driver);
+}, 10000);
 
 describe("Checkout process", () => {
     test("Login and purchase product", async () => {
 
         await loginPage.login();
         await homePage.selectItem();
+        await homePage.compareText();
 
         await cartPage.viewCart();
+        await cartPage.compareText();
         await cartPage.proceedToCheckout();
         await cartPage.fillOutInformation();
+        await cartPage.proceedWithOrder();
         await cartPage.submitOrder();
         await cartPage.returnToHomePage();
 

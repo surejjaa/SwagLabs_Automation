@@ -4,7 +4,7 @@
         "password": "secret_sauce",
         "first_name": "Rajna",
         "last_name": "Ali",
-        "zip": "72000"
+        "zip": "71000"
     },
     "url": {
         "login_page": "https://www.saucedemo.com/",
@@ -13,7 +13,9 @@
     "titles": {
         "login_page": "Swag Labs"
     },
-    "headers": {
-        "home_page": "Products"
+    "text": {
+        "home_page": "Products",
+        "item" : "Sauce Labs Backpack",
+        "description" : "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection."
     }
 }
