@@ -1,5 +1,6 @@
 import { By, WebDriver, until } from "selenium-webdriver";
 import BasePage from "./base-page";
+import BasePageSteps from "../steps/base-page-steps";
 
 export class CartPage extends BasePage {
     protected viewCartButton = By.className("shopping_cart_link");
@@ -12,4 +13,5 @@ export class CartPage extends BasePage {
     protected zipInput = By.id('postal-code');
     protected finishButton = By.id('finish');
     protected backHomeButton = By.id('back-to-products');
+    protected baseMethods: BasePageSteps;
 }

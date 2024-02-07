@@ -1,9 +1,11 @@
 import { By, WebDriver, until } from "selenium-webdriver";
 import { LoginPage } from "../page-objects/login-page";
+import BasePageSteps from "./base-page-steps";
 
 export class LoginPageSteps extends LoginPage{
     constructor(driver: WebDriver) {
         super(driver);
+        this.baseMethods = new BasePageSteps(driver);
     }
 
     async login(): Promise<void> {
