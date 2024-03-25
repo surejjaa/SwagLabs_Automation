@@ -31,7 +31,7 @@ describe("Checkout process", () => {
         await cartPage.submitOrder();
         await cartPage.returnToHomePage();
 
-    }, 30000);
+    }, 25000);
 
     afterEach(async () => {
         await deleteCookies(driver);
